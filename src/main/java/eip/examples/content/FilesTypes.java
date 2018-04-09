@@ -6,7 +6,8 @@ public enum FilesTypes {
 
 	XML(".xml"),
 
-	TXT(".txt");
+	TXT(".txt")
+	;
 
 	private String description;
 

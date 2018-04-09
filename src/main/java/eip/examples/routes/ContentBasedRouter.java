@@ -12,9 +12,7 @@ public class ContentBasedRouter extends RouteBuilder {
 	public void configure() throws Exception {
 
 		from("file:input?noop=true")
-//		.log("${headers}")
-//		.log("${body}")
-		.routeId("SEND TO RIGHT PATH")
+		.routeId("CONTENT BASED ROUTER")
 			.choice()
 				.when(header("CamelFileNameConsumed").endsWith(FilesTypes.JSON.getDescription()))
 					.to("file:"+ FilesTypes.JSON)
